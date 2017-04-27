@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                     Eysa est la meilleure ;)
                 </div>
 
                 <div class="links">
