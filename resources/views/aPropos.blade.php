@@ -1,7 +1,17 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: etien
- * Date: 01/05/2017
- * Time: 16:50
- */
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Apropos</div>
+
+                    <div class="panel-body">
+                        blabla
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

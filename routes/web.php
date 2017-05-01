@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
+Route::get('/', 'WelcomeController@index');
 Route::get('/home', 'HomeController@index');
+Route::get('1', function() { return 'Je suis la page 1 !'; });
+
+Route::get('/', ['as' => 'APropos', function()
+
+{
+    return 'Je suis la page A propos !';
+}]);

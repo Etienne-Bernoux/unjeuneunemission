@@ -1,1 +1,51 @@
 Projet une mission pour un jeune
+
+Cahier des charges
+
+Description du projet.
+
+Comme chaque année l’Eglise propose au jeunes d’ile de France pour se retrouver, se connaître et célébrer. Ce sont les jeunes de 4/3 qui se retrouverons à Jambville. Pour accompagné se rassemblement l’equipe de la mairie de St Louis(groupe rassemblant la moitié des jeunes parisien) aimerai trouver une personne qui pourrait prier pour chaque jeunes.
+
+Afin de repartir un jeune à chaque priant, nous avons besoin d’une solution technique réalisant automatiquement cette attribution. Cette solution devra se présenter sous la forme d’une plateforme web.
+
+Objectifs.
+
+Cette plateforme web devra permettre de sauvegarder une liste de jeunes puis d’ajouter au fur et à mesure de l’inscription de nouveau jeunes. Pour des raisons de confidentialité, seul le prénom des jeunes devra apparaître en clair dans notre base de donne. Si les nom sont récupéré pour garantir l’absence de doublons, ils devront être hacher.
+
+Ensuite chaque priant ou groupe de priant pourra se connecter à la plateforme à l’aide de son adresse mail qui lui servira d’identifiant. Le mot de passe ne sera demandé que si notre plateforme dispose d’un certificat.
+L’utlisateur a ensuite soi la possibilité de demander un priant pour lui même. Soit pour un groupe de personne en téléchargeant un tableau avec à chaque ligne le prenom et le nom de famille du priant.
+
+Une fois ce fichier envoyer, le priant recevra par mail une confirmation avec un tableau et un tableur en pièce jointe contenant le prénom d’un jeune associé au nom et prénom du priant.
+
+Deux jours avant l’evenement un mail de rappel sera envoyé à tout les priants ou groupe de priants. Une newsletter sera aussi envoyé à la fin de l’evenement.
+
+Caractéristique technique
+
+Modèle de donnée
+
+Pour garder une trace des informations, on utilisera une base de donnée composée de deux tables. La première , user contiendra 3 champs: idUser, emailUser et password. La seconde table contiendra les champs: idJeune,prenomJeune, nomHacherJeune, idUser, prénomPriant, nomPriant.
+
+Use case
+
+Sign in
+
+L’utilisateur entre son eMail et son mot de passe, il faut comfirmer l’email et le mot de passe.
+Un script vérifie email et mot de passe puis envoie en post une requête de création au serveur.
+Si possible on vérifie le mail par retour de mail. Si on peut trouver ce code déjà fait c’est top.
+
+Connection
+
+L’utilisateur envoie son mail et son mot de passe via un formulaire.
+Si le site n’est pas en HTTPS précisé qu’il ne faut se connecter à partir d’une box public.
+
+Si il n’a pas encore de priant alors:
+
+Page de choix: priant seul ou famille/ communauté
+
+L’utilisateur choisit entre les deux possibilités.
+
+Sinon page avec le nom ou le tableau de jeunes/ priant.
+
+
+
+
