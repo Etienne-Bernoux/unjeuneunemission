@@ -19,8 +19,6 @@
                 <div class="panel-heading">Vos priants?</div>
                 <div class="panel-body">
 
-
-
                 <a class="btn btn-link" href="{{ route('password.request') }}">
                     Ajouter des priants
                 </a>
