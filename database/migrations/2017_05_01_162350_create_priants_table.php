@@ -14,7 +14,9 @@ class CreatePriantsTable extends Migration
     public function up()
     {
         Schema::create('priants', function(Blueprint $table) {
-            $table->increments('idPriants');
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('prenom', 100);
             $table->string('nom',100);
             $table->timestamps();

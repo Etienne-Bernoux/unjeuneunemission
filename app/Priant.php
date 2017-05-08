@@ -6,9 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Priant extends Model
 {
+    protected $id;
+    protected $user_id;
+    protected $prenom;
+    protected $nom;
+
     protected $table = 'priants';
+    protected $primaryKey = 'id';
+
+    /**
+     * Get the jeunes for the priant.
+     */
+    public function jeunes()
+    {
+        return $this->hasMany('App\Jeune');
+    }
 
 
-
-    public $timestamps = false;
 }

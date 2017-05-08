@@ -14,10 +14,11 @@ class CreateJeunesTable extends Migration
     public function up()
     {
         Schema::create('jeunes', function(Blueprint $table) {
-            $table->increments('idJeunes');
+            $table->increments('id');
+            $table->integer('priant_id')->unsigned();
+            $table->foreign('priant_id')->references('id')->on('priants');
             $table->string('prenom', 100);
             $table->string('nom',100);
-            $table->integer('idPriants');
             $table->timestamps();
         });
     }

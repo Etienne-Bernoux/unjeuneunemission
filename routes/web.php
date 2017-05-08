@@ -19,3 +19,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('1', function() { return 'Je suis la page 1 !'; });
 
 Route::get('/APropos',['as' => 'APropos', 'uses' =>'AProposController@index']);
+
+
+// Route for priant
+Route::get('/priants',['as' => 'priants', 'uses' =>'PriantsController@index']);
+Route::get('/priants/add',['as' => 'priants.add', 'uses' =>'PriantsController@add']);
+Route::post('/priants/create',['as' => 'priants.create', 'uses' =>'PriantsController@create']);
