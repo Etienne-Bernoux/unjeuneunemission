@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Jeune;
 use App\Priant;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -54,11 +55,12 @@ class PriantsController extends Controller
         //echo ($priant->id);
         Jeune::givePriantToJeune($priant->id);
 
-        return view('home');
+        return redirect()->route('home');
     }
 
     protected function delete (Request $request){
         //Get the priant
+        Log::debug("Request value".$request);
         $priant = Priant::find($request->id);
 
         //Remove the Priant for Jeune
@@ -67,6 +69,6 @@ class PriantsController extends Controller
         //Remove priant
         Priant::find($priant->id)->delete();
 
-        return view('home');
+        return redirect()->route('home');
     }
 }

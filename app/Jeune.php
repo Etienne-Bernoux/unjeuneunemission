@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Database\Eloquent\Model;
 
 class Jeune extends Model
@@ -26,17 +27,26 @@ class Jeune extends Model
     {
         //Check if the priant exist
         $priant = Priant::findOrFail($priant_id);
-        //echo ($priant->id);
+        Log::info("ajout d'un jeune pour: " .$priant->id);
         //Check if the priant have no jeune
         if ($priant == null) return null;
         $jeune = Priant::findOrFail($priant_id)
             ->jeunes()
             ->first();
-        if ($jeune != null) return $jeune;
+        if ($jeune != null) {
+            Log::info("Le priant à déja un jeune");
+            return $jeune;
+        }
         else {
+            $jeune = null;
             $jeune = Jeune::where('priant_id', 0)->first();
-            //echo ($jeune->id);
+            Log::debug($jeune);
+            if( $jeune == null){
+                Log::alert("Il n'y a plus de jeune");
+                return null;
+            }
             $jeune->priant_id = $priant->id;
+            Log::info($priant." prie pour le jeune : " .$jeune  );
             $jeune->save();
             return $jeune;
         }
