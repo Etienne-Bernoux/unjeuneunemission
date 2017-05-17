@@ -17,56 +17,80 @@
                         , merci pour votre aide de prière
                     </div>
 
-                    <div class="panel-heading">Vos priants?</div>
+                    <div class="panel-heading">Vos priants</div>
                     <div class="panel-body">
-
-                        <a class="btn btn-link" href="{{ route('priants.add') }}">
+                        <!--
+                        <a class="btn btn-link" href="{\{ route('priants.add') }}">
                             Ajouter des priants
                         </a>
+                        -->
                         @php
                             $priants = App\Priant::all()
+                                ->where('user_id' , '=', Auth::user()->id);
                         @endphp
-                        <table class="table">
-                            <thead>
-                            <th> Prenom</th>
-                            <th> Nom</th>
-                            <th> Prenom du jeune</th>
-                            <th> Modifier</th>
-                            <th> Supprimer</th>
-                            </thead>
+                        <form method="POST" action="{{ route('priants.create') }}">
+                            <table class="table">
+                                <thead>
+                                <th> Prenom</th>
+                                <th> Nom</th>
+                                <th> Prenom du jeune</th>
+                                <th> Action</th>
+                                </thead>
 
-                            <tbody>
-                            @foreach ($priants as $priant)
-                                @php
-                                    $jeune = app\Priant::find($priant->id)->jeunes->first()
-                                @endphp
+                                <tbody>
+                                @foreach ($priants as $priant)
+                                    @php
+                                        $jeune = app\Priant::find($priant->id)->jeunes->first()
+                                    @endphp
+                                    <tr>
+
+                                        <td>
+                                            {{$priant->prenom}}
+                                        </td>
+                                        <td>
+                                            {{$priant->nom}}
+                                        </td>
+                                        <td>
+                                            @if($jeune != null)
+                                                {{$jeune->prenom}}
+                                            @else
+                                                Plus de jeune
+                                            @endif
+                                        </td>
+
+                                        <td>
+                                            <a href="{{route('priants.delete',['id' => $priant->id])}}"
+                                               class="btn btn-sm btn-danger">
+                                                Supprimer
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+
                                 <tr>
+
+                                    {{ csrf_field() }}
+
                                     <td>
-                                        {{$priant->prenom}}
+                                        <input id="prenom" type="text" class="form-control" name="prenom"
+                                               value="{{ old('prenom') }}" required>
                                     </td>
                                     <td>
-                                        {{$priant->nom}}
-                                    </td>
-                                    <td>
-                                        @if($jeune != null)
-                                            {{$jeune->prenom}}
-                                        @else
-                                            Plus de jeune
-                                        @endif
+                                        <input id="nom" type="text" class="form-control" name="nom"
+                                               value="{{ old('nom') }}" required>
                                     </td>
                                     <td>
 
                                     </td>
+
                                     <td>
-                                        <a href="{{route('priants.delete',['id' => $priant->id])}}" class="btn btn-sm btn-danger">
-                                            X
-                                        </a>
+                                        <input type="submit" value="Ajouter" class="btn btn-primary">
                                     </td>
+
                                 </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-
+                                </tbody>
+                            </table>
+                        </form>
                     </div>
 
                 </div>

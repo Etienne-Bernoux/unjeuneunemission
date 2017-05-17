@@ -18,7 +18,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/home',['as' => 'home', 'uses' =>'HomeController@index']);
 Route::get('1', function() { return 'Je suis la page 1 !'; });
 
-Route::get('/APropos',['as' => 'APropos', 'uses' =>'AProposController@index']);
+Route::get('/APropos',['as' => 'APropos', 'uses' =>'HomeController@index']);
 
 
 // Route for priant

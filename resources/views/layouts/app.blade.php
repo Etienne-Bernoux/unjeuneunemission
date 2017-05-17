@@ -24,7 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                <div class="navbar-header">
+                <div class="navbar-header" >
 
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -42,16 +42,17 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;<li><a href="{{ route('APropos') }}">A propos</a></li>
+                    <ul class="nav navbar-nav ">
+                    <!--  <li><a href="{{ route('APropos') }}">Découvrir la mission</a></li> -->
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right ">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Se connecter</a></li>
-                            <li><a href="{{ route('register') }}">S'enregistrer</a></li>
+                            <li><a href="{{ route('login') }}" >Se connecter</a></li>
+                            <li><a href="{{ route('register') }}" >S'enregistrer</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
