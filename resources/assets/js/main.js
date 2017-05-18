@@ -129,7 +129,7 @@
 							.scrollex({
 								top:		'30vh',
 								bottom:		'30vh',
-								delay:		50,
+								delay:		20,
 								initialize:	function() { $(this).addClass('inactive'); },
 								terminate:	function() { $(this).removeClass('inactive'); },
 								enter:		function() { $(this).removeClass('inactive'); },
@@ -140,7 +140,7 @@
 						$('.main.style1')
 							.scrollex({
 								mode:		'middle',
-								delay:		100,
+								delay:		20,
 								initialize:	function() { $(this).addClass('inactive'); },
 								terminate:	function() { $(this).removeClass('inactive'); },
 								enter:		function() { $(this).removeClass('inactive'); },
@@ -150,7 +150,7 @@
 						$('.main.style2')
 							.scrollex({
 								mode:		'middle',
-								delay:		100,
+								delay:		20,
 								initialize:	function() { $(this).addClass('inactive'); },
 								terminate:	function() { $(this).removeClass('inactive'); },
 								enter:		function() { $(this).removeClass('inactive'); },
@@ -161,7 +161,7 @@
 						$('#contact')
 							.scrollex({
 								top:		'50%',
-								delay:		50,
+								delay:		20,
 								initialize:	function() { $(this).addClass('inactive'); },
 								terminate:	function() { $(this).removeClass('inactive'); },
 								enter:		function() { $(this).removeClass('inactive'); },
@@ -215,7 +215,7 @@
 
 						// Update scrolly links.
 							$('a[href^="#"]').scrolly({
-								speed: 1500,
+								speed: 2000,
 								offset: $header.outerHeight() - 1
 							});
 
