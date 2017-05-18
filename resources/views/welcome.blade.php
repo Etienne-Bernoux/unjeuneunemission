@@ -143,7 +143,7 @@
         <header>
             <h2>Un jeune, une mission</h2>
         </header>
-        <p>Prier pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
+        <p>Priez pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
         <div class="links">
             @if (!Auth::check())
                 <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
@@ -165,8 +165,8 @@
             <h2>La mission</h2>
         </header>
         <p>Comme chaque année, le frat rassemble des milliers de jeunes qui désir rencontrer des jeunes de leurs ages
-            avec qui partager la foi. Ces jeunes portent chacun une mission extraordinaire choisit par le Christ.
-            La mission est de prier pour qu'ils découvrent cette mission</p>
+            avec qui partager la foi. Ces jeunes portent chacun une projet extraordinaire choisit par le Christ.
+            Votre mission est de prier pour qu'ils découvrent ce projet</p>
     </div>
     <a href="#two" class="button style2 down anchored">Next</a>
 </section>
@@ -191,8 +191,24 @@
                 Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
                 arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
         </header>
+    </div>
+</section>
 
-
+<!-- Contact -->
+<section id="links" class="main style3 primary">
+    <div class="content">
+      <header>
+          <h2>C'est parti, je prie !</h2>
+      </header>
+      <p>Je prie pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
+      <div class="links">
+          @if (!Auth::check())
+              <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
+              <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+          @else
+              <a href="{{ url('/home') }}">Mes Priants</a>
+          @endif
+      </div>
     </div>
 </section>
 
@@ -200,8 +216,8 @@
 <section id="contact" class="main style3 secondary">
     <div class="content">
         <header>
-            <h2>Besoin d'aide</h2>
-            <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+            <h2>Besoin d'aide ?</h2>
+            <p>N'hésitez pas à nous contacter.</p>
         </header>
         <div class="box">
             <form method="post" action="#">
@@ -224,14 +240,11 @@
         <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
         <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
         <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-        <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-        <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
     </ul>
 
     <!-- Menu -->
     <ul class="menu">
-        <li>&copy; Untitled</li>
+        <li>&copy; Unjeuneunemission - 2017</li>
         <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
     </ul>
 
