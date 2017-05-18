@@ -12,6 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+      html, body, #app {
+        height: 100%;
+      }
+    </style>
 
     <!-- Scripts -->
     <script>
