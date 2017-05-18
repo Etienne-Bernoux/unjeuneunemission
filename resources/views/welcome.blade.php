@@ -164,7 +164,9 @@
         <header>
             <h2>La mission</h2>
         </header>
-        <p>Comme chaque année, le frat rassemble des milliers de jeunes...</p>
+        <p>Comme chaque année, le frat rassemble des milliers de jeunes qui désir rencontrer des jeunes de leurs ages
+            avec qui partager la foi. Ces jeunes portent chacun une mission extraordinaire choisit par le Christ.
+            La mission est de prier pour qu'ils découvrent cette mission</p>
     </div>
     <a href="#two" class="button style2 down anchored">Next</a>
 </section>
@@ -175,9 +177,7 @@
         <header>
             <h2>Comment prier?</h2>
         </header>
-        <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-            Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-            id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+        <p>Que vous soyez seul ou que vous souhaitiez inscrire plusieurs personnes, la démarche est simple</p>
     </div>
     <a href="#work" class="button style2 down anchored">Next</a>
 </section>
