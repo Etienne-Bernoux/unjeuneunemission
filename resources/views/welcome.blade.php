@@ -146,8 +146,8 @@
         <p>Priez pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
         <div class="links">
             @if (!Auth::check())
-                <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
-                <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+                <a class="m-b-md button style2" href="{{ url('/login') }}">Je suis déja inscrit</a>
+                <a class="m-b-md button style2" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
             @else
                 <a href="{{ url('/home') }}">Mes Priants</a>
             @endif
@@ -203,8 +203,8 @@
       <p>Je prie pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
       <div class="links">
           @if (!Auth::check())
-              <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
-              <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+              <a class="m-b-md button style2" href="{{ url('/login') }}">Je suis déja inscrit</a>
+              <a class="m-b-md button style2" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
           @else
               <a href="{{ url('/home') }}">Mes Priants</a>
           @endif
