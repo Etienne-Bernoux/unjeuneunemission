@@ -188,22 +188,49 @@
         </header>
         <p>Que vous soyez seul ou que vous souhaitiez inscrire plusieurs personnes, la démarche est simple.
             Enregistrez-vous sur la plateforme. Une fois inscrit, vous arrivez sur la page "mes priants". Vous
-            remplissez alors le prénom et le nom de tout ceux s'engagent à prier. Ils reçoivent le prénom d'un jeune. Le
-            weekend de Pentecôte, vous priez pour votre jeune.
+            remplissez alors le prénom et le nom de tout ceux qui s'engagent à prier. Ils reçoivent le prénom d'un
+            jeune. Le weekend de Pentecôte, vous priez pour votre jeune.
         </p>
+        @if (!Auth::check())
+            <p>
+                <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
+                <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+            </p>
+
+
+        @else
+            <p>
+                <a class="m-b-md btn" href="{{ url('/home') }}">Mes Priants</a>
+            </p>
+        @endif
     </div>
-    <a href="#work" class="button style2 down anchored">Next</a>
+    <a href="#three" class="button style2 down anchored">Next</a>
 </section>
 
 <!-- three -->
 <section id="three" class="main style2 right dark fullscreen">
     <div class="content box style">
         <header>
+            <h2>La communauté de prière</h2>
+        </header>
+        <p>
+            Pour suivre le Frat avec nous, rejoignez notre communauté Hozanna.
+            <iframe width="300" height="470" src="https://hozana.org/widget/communaute/6634" style="border:none;" frameborder="0"></iframe>
+        </p>
+    </div>
+    <a href="#four" class="button style2 down anchored">Next</a>
+</section>
+
+<!-- four -->
+<section id="four" class="main style2 left dark fullscreen">
+    <div class="content box style">
+        <header>
             <h2>Notre équipe</h2>
         </header>
-
-
+        <p>
+        </p>
     </div>
+    <a href="#contact" class="button style2 down anchored">Next</a>
 </section>
 
 <!-- Contact -->
@@ -213,7 +240,7 @@
             <h2>Besoin d'aide</h2>
             <p>
                 Contactez moi:
-                <a HREF="mailto:etienne.bernoux@protonmail.com">etienne.bernoux@protonmail.com </a>
+                <a HREF="mailto:ebernoux@protonmail.com">ebernoux@protonmail.com </a>
             </p>
 
         </header>
