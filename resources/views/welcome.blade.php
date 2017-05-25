@@ -126,7 +126,7 @@
         <ul>
             <li><a href="#intro">Bienvenue</a></li>
             @if (!Auth::check())
-                <li><a href="{{ url('/login') }}">Se connecter</a></li>
+                <li><a chref="{{ url('/login') }}">Se connecter</a></li>
             <!-- <li><a href="{{ url('/register') }}">S'inscrire</a><</li> -->
             @else
                 <li><a href="{{ url('/home') }}">Mes Priants</a></li>
@@ -143,20 +143,20 @@
         <header>
             <h2>Un jeune, une mission</h2>
         </header>
-        <p>Prier pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
+        <p>Priez pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
         <div class="links">
             @if (!Auth::check())
                 <p>
-                    <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
+                    <a class="m-b-md button style2 pray" href="{{ url('/login') }}">Je suis déja inscrit</a>
                 </p>
                 <p>
-                    <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+                    <a class="m-b-md button style2 pray" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
                 </p>
 
 
             @else
                 <p>
-                    <a class="m-b-md btn" href="{{ url('/home') }}">Mes Priants</a>
+                    <a class="m-b-md button style2 pray" href="{{ url('/home') }}">Mes Priants</a>
                 </p>
             @endif
         </div>
@@ -173,9 +173,9 @@
             <h2>La mission</h2>
         </header>
         <p>Comme chaque année, le FRAT de Jambville rassemble des milliers de jeunes qui désirent se rencontrer pour
-            partager et vivre leur foi. Ces jeunes portent chacun une mission extraordinaire choisie par le Christ.
-            Votre engagement est de prier pour eux pendant le FRAT (Pentecôte 2017) pour qu'ils découvrent cette
-            mission.</p>
+            partager et vivre leur foi. Ces jeunes portent chacun un projet extraordinaire choisie par le Christ.
+            Votre mission est de prier pour eux pendant le FRAT (Pentecôte 2017) pour qu'ils découvrent cette
+            projet.</p>
     </div>
     <a href="#two" class="button style2 down anchored">Next</a>
 </section>
@@ -193,8 +193,8 @@
         </p>
         @if (!Auth::check())
             <p>
-                <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
-                <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+                <a class="m-b-md button style2 pray" href="{{ url('/login') }}">Je suis déja inscrit</a>
+                <a class="m-b-md button style2 pray" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
             </p>
 
 
@@ -240,7 +240,7 @@
             <h2>Besoin d'aide</h2>
             <p>
                 Contactez moi:
-                <a HREF="mailto:ebernoux@protonmail.com">ebernoux@protonmail.com </a>
+                <a href="mailto:ebernoux@protonmail.com">ebernoux@protonmail.com </a>
             </p>
 
         </header>
