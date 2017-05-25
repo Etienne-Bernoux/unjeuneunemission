@@ -125,14 +125,14 @@
     <nav>
         <ul>
             <li><a href="#intro">Bienvenue</a></li>
-            <li><a href="#one">Découvrir la mission</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                @if (Auth::check())
-                    <a href="{{ url('/home') }}">Mes Priants</a>
-                @else
-                @endif
-            </li>
+            @if (!Auth::check())
+                <li><a href="{{ url('/login') }}">Se connecter</a></li>
+            <!-- <li><a href="{{ url('/register') }}">S'inscrire</a><</li> -->
+            @else
+                <li><a href="{{ url('/home') }}">Mes Priants</a></li>
+
+            @endif
+
         </ul>
     </nav>
 </header>
@@ -146,10 +146,18 @@
         <p>Prier pour un jeune, pour qu'il puisse rencontrer le Christ et découvrir son amour.</p>
         <div class="links">
             @if (!Auth::check())
-                <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
-                <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+                <p>
+                    <a class="m-b-md btn" href="{{ url('/login') }}">Je suis déja inscrit</a>
+                </p>
+                <p>
+                    <a class="m-b-md btn" href="{{ url('/register') }}">Je ne suis pas inscrit</a>
+                </p>
+
+
             @else
-                <a href="{{ url('/home') }}">Mes Priants</a>
+                <p>
+                    <a class="m-b-md btn" href="{{ url('/home') }}">Mes Priants</a>
+                </p>
             @endif
         </div>
         <footer>
@@ -164,9 +172,10 @@
         <header>
             <h2>La mission</h2>
         </header>
-        <p>Comme chaque année, le frat rassemble des milliers de jeunes qui désir rencontrer des jeunes de leurs ages
-            avec qui partager la foi. Ces jeunes portent chacun une mission extraordinaire choisit par le Christ.
-            La mission est de prier pour qu'ils découvrent cette mission</p>
+        <p>Comme chaque année, le FRAT de Jambville rassemble des milliers de jeunes qui désirent se rencontrer pour
+            partager et vivre leur foi. Ces jeunes portent chacun une mission extraordinaire choisie par le Christ.
+            Votre engagement est de prier pour eux pendant le FRAT (Pentecôte 2017) pour qu'ils découvrent cette
+            mission.</p>
     </div>
     <a href="#two" class="button style2 down anchored">Next</a>
 </section>
@@ -177,19 +186,20 @@
         <header>
             <h2>Comment prier?</h2>
         </header>
-        <p>Que vous soyez seul ou que vous souhaitiez inscrire plusieurs personnes, la démarche est simple</p>
+        <p>Que vous soyez seul ou que vous souhaitiez inscrire plusieurs personnes, la démarche est simple.
+            Enregistrez-vous sur la plateforme. Une fois inscrit, vous arrivez sur la page "mes priants". Vous
+            remplissez alors le prénom et le nom de tout ceux s'engagent à prier. Ils reçoivent le prénom d'un jeune. Le
+            weekend de Pentecôte, vous priez pour votre jeune.
+        </p>
     </div>
     <a href="#work" class="button style2 down anchored">Next</a>
 </section>
 
-<!-- Work -->
-<section id="work" class="main style3 primary">
-    <div class="content">
+<!-- three -->
+<section id="three" class="main style2 right dark fullscreen">
+    <div class="content box style">
         <header>
             <h2>Notre équipe</h2>
-            <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-                Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-                arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
         </header>
 
 
@@ -201,8 +211,13 @@
     <div class="content">
         <header>
             <h2>Besoin d'aide</h2>
-            <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+            <p>
+                Contactez moi:
+                <a HREF="mailto:etienne.bernoux@protonmail.com">etienne.bernoux@protonmail.com </a>
+            </p>
+
         </header>
+        <!--
         <div class="box">
             <form method="post" action="#">
                 <div class="field half first"><input type="text" name="name" placeholder="Name"/></div>
@@ -213,6 +228,7 @@
                 </ul>
             </form>
         </div>
+        -->
     </div>
 </section>
 
@@ -220,6 +236,7 @@
 <footer id="footer">
 
     <!-- Icons -->
+    <!--
     <ul class="actions">
         <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
         <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -228,11 +245,11 @@
         <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
         <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
     </ul>
-
+-->
     <!-- Menu -->
     <ul class="menu">
-        <li>&copy; Untitled</li>
-        <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        <li>&copy; Etienne Bernoux 2017</li>
+        <!-- <li>Design: <a href="https://html5up.net">HTML5 UP</a></li> -->
     </ul>
 
 </footer>

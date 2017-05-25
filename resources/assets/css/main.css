@@ -2093,7 +2093,7 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background: url("images/overlay.png"), url("../../images/intro2.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2103,7 +2103,7 @@
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
+		background: url("images/overlay.png"), url("../../images/mission.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2112,11 +2112,20 @@
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+		background: url("images/overlay.png"), url("../../images/prier.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+
+/* Three */
+
+#three {
+	background: url("images/overlay.png"), url("../../images/Equipe.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /* Contact */
 
@@ -2153,12 +2162,15 @@
 		}
 
 /* Bonus */
-.links > a {
+.links > p > a {
 	color: #636b6f;
-	padding: 0 25px;
-	font-size: 15px;
+    padding: 0 25px;
+	font-size: 20px;
 	font-weight: 600;
 	letter-spacing: .1rem;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+.links > p > a:hover{
+	color: #9BA2AB;
 }

@@ -9,12 +9,15 @@
                     <div class="panel-heading">Comment prier pour un jeune?</div>
 
                     <div class="panel-body">
-                        Bonjour
-                        @if( Auth::check() )
-                            {{Auth::user()->name}}
-                            {{Auth::user()->familyName}}
-                        @endif
-                        , merci pour votre aide de prière
+                        <p>Bonjour
+                            @if( Auth::check() )
+                                {{Auth::user()->name}}
+                                {{Auth::user()->familyName}}
+                            @else
+                                Merci de vous reconnecter
+                            @endif
+                            , merci d'accompagner les jeunes par votre prière.</p>
+                        <p>Inscrivez vos priants pour recevoir un jeune. Vous devez vous inscrire aussi vous même.</p>
                     </div>
 
                     <div class="panel-heading">Vos priants</div>
@@ -54,7 +57,20 @@
                                             @if($jeune != null)
                                                 {{$jeune->prenom}}
                                             @else
-                                                Plus de jeune
+                                                @php
+                                                    // On essaie de lui trouver un jeune sinon on en affiche un au hazard
+                                                    app\Jeune::givePriantToJeune($priant->id);
+                                                    $jeune = app\Priant::find($priant->id)->jeunes->first();
+                                                @endphp
+                                                @if ($jeune !=null)
+                                                    {{$jeune->prenom}}
+                                                @else
+                                                    @php
+                                                        $jeuneatt = app\Jeune::find(rand ( 1 ,1085 ))->first();
+                                                    @endphp
+                                                    {{$jeuneatt->prenom}}
+                                                @endif
+
                                             @endif
                                         </td>
 

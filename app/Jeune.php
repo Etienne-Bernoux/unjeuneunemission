@@ -18,7 +18,7 @@ class Jeune extends Model
         return $this->belongsTo('App\Priant');
     }
 
-    protected static function givePriantToJeune($priant_id)
+    public static function givePriantToJeune($priant_id)
     {
         //Check if the priant exist
         $priant = Priant::findOrFail($priant_id);
@@ -46,7 +46,7 @@ class Jeune extends Model
         }
     }
 
-        protected static function removePriantToJeune($priant_id)
+        public static function removePriantToJeune($priant_id)
     {
         //Check if the priant exist
         $priant = Priant::findOrFail($priant_id);
